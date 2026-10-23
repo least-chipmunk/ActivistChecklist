@@ -259,6 +259,20 @@ const styledSpanComponent = mark({
   className: ({ value }) => value.className || '',
 });
 
+const termComponent = mark({
+  label: 'Term',
+  description: 'Apply a pop-up definition to a word or phrase',
+  schema: {
+    slug: fields.text({
+      label: 'slug',
+      description: 'Reference to a definition by slug',
+      validation: { isRequired: true },
+    }),
+  },
+  className:
+    'underline underline-offset-4 decoration-dotted decoration-[#6652ff] hover:bg-[##6652ff]/10',
+});
+
 // Shared set used in most collections
 const contentComponents = {
   Alert: alertComponent,
@@ -268,6 +282,7 @@ const contentComponents = {
   VideoEmbed: videoEmbedComponent,
   CopyButton: copyButtonComponent,
   StyledSpan: styledSpanComponent,
+  Term: termComponent,
 };
 
 // ─── Badge components (checklist items only) ──────────────────────────────────
