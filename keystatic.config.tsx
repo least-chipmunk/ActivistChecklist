@@ -261,7 +261,7 @@ const styledSpanComponent = mark({
 
 const termComponent = mark({
   label: 'Term',
-  description: 'Apply a pop-up definition to a word or phrase',
+  tag: 'span',
   schema: {
     slug: fields.text({
       label: 'slug',
@@ -269,8 +269,6 @@ const termComponent = mark({
       validation: { isRequired: true },
     }),
   },
-  className:
-    'underline underline-offset-4 decoration-dotted decoration-[#6652ff] hover:bg-[##6652ff]/10',
 });
 
 // Shared set used in most collections
