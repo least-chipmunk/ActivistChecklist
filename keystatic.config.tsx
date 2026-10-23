@@ -11,6 +11,7 @@ import { config, collection, fields, singleton } from '@keystatic/core';
 import { wrapper, block, inline, repeating, mark } from '@keystatic/core/content-components';
 import { Icon } from '@keystar/ui/icon';
 import { boldIcon } from '@keystar/ui/icon/icons/boldIcon';
+import { circleQuestionMarkIcon } from '@keystar/ui/icon/icons/circleQuestionMarkIcon';
 import ChecklistItemEditorPreview from '@/components/keystatic/ChecklistItemEditorPreview';
 import AlertEditorPreview from '@/components/keystatic/AlertEditorPreview';
 
@@ -262,6 +263,7 @@ const styledSpanComponent = mark({
 const termComponent = mark({
   label: 'Term',
   tag: 'span',
+  icon: <Icon src={circleQuestionMarkIcon} />,
   schema: {
     slug: fields.text({
       label: 'slug',
@@ -269,6 +271,7 @@ const termComponent = mark({
       validation: { isRequired: true },
     }),
   },
+  className: 'underline underline-offset-4 text-primary hover:bg-primary/10 rounded-sm',
 });
 
 // Shared set used in most collections
